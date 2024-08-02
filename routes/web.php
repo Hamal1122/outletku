@@ -6,6 +6,7 @@ use App\Http\Controllers\productController;
 use App\Http\Middleware\checkRole;
 use App\Models\product;
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\ProductFilter;
 
 
 

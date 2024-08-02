@@ -1,6 +1,8 @@
 @extends('layout')
 
 @section('layout')
+@livewireStyles
+@livewireScripts
 
 <div class="container px-10">
     <div class="px-4 text-gray-500  mt-4 flex gap-6 border-b py-3 justify-between">
@@ -84,18 +86,12 @@
         </div>
     </nav>
 
-    <div class="mx-48 mt-6 flex justify-between text-sm text-gray-500 font-semibold">
-        <a class="hover:text-black" href="">kategori 1</a>
-        <a class="hover:text-black" href="">kategori 2</a>
-        <a class="hover:text-black" href="">kategori 3</a>
-        <a class="hover:text-black" href="">kategori 4</a>
-        <a class="hover:text-black" href="">kategori 5</a>
-        <a class="hover:text-black" href="">kategori 6</a>
-        <a class="hover:text-black" href="">kategori 7</a>
-        <a class="hover:text-black" href="">kategori 8</a>
+    @auth
+    <livewire:filter-product />
+    @else
+    <div>
+        Login dulu yaaaa😍😍
     </div>
-    
-   
-
+    @endauth
 
 </div>
