@@ -8,7 +8,8 @@ use App\Models\product;
 
 class FilterProduct extends Component
 {
-    public $category;
+    public $category ='All';
+    public $ALL;
 
     public function setCategory($id_category)
     {
@@ -18,14 +19,16 @@ class FilterProduct extends Component
     public function render(){
         $product = product::query();
 
-        if($this->category && $this->category !== 'All'){
+        if($this->category  !== 'All'){
             $product->where('id_category', $this->category);
         }
+
+        $this->ALL = product::all();
 
         return view('livewire.filter-product', [
             'products'=> $product->get(),
             'categories'=> category::all(),
-            'all'=> product::all(),
+            'all'=> $this->All(),
         ]);
     }
 }

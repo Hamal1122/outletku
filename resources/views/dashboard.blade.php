@@ -86,12 +86,6 @@
         </div>
     </nav>
 
-    @auth
     <livewire:filter-product />
-    @else
-    <div>
-        Login dulu yaaaa😍😍
-    </div>
-    @endauth
 
 </div>

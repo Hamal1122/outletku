@@ -27,6 +27,8 @@ Route::get('/', [DashboardController::class, 'dashboardUser'])->name('dashboard.
 
 // menu for user
 Route::middleware(checkRole::class.':1')->group(function(){
+ 
+    Route::get('product/detail-product/{id}', [productController::class, 'detailProductUser'])->name('detailProductUser');
     
 
    

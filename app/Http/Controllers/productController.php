@@ -18,6 +18,11 @@ class productController extends Controller
         return view('detailProduct' ,compact('data'));
     }
 
+    public function detailProductUser($id){
+        $item = product::findOrFail($id);
+        return view('product.detailProductUser' ,compact('item'));
+    }
+
     public function deleteProduct($id){
         $data = product::find($id);
         $data->delete();
