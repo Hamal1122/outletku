@@ -28,7 +28,7 @@
                 @foreach ($data as $data)
                     <option value="{{$data->id}}">{{ $data->name }}</option>
                 @endforeach
-                  </select>
+                </select>
             </div>
 
             <div class="mt-4">
