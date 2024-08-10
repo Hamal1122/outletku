@@ -39,6 +39,7 @@ class AuthController extends Controller
         if(Auth::attempt($request->only('email', 'password'))){
             $userRole = auth()->user()->role;
             if($userRole == 0){
+                notify()->success('Selamat Anda Berhasil Login 🔥');
                 return redirect()->intended('/dashboardAdmin')->with('Selamat anda berhasil login 🔥');
             }else if($userRole == 1){
                  return redirect()->intended('/')->with('Selamat anda berhasil login 🔥');

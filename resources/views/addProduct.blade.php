@@ -32,17 +32,30 @@
             </div>
 
             <div class="mt-4">
-                <label for="">Thumbnail</label>
-                <input type="file" class="file-input file-input-bordered w-full mt-1" name="thumbnail" id="thumbnail" />
+                <label for="">Image 1</label>
+                <input type="file" class="file-input file-input-bordered w-full mt-1" name="image1" id="image1" />
             </div>
+
             <div class="mt-4">
-                <label for="">Product's Images</label>
-                <input type="file" class="file-input file-input-bordered w-full mt-1" name="image" id="image" />
+                <label for="">Image 2</label>
+                <input type="file" class="file-input file-input-bordered w-full mt-1" name="image2" id="image2" />
             </div>
+
+            <div class="mt-4">
+                <label for="">Image 3</label>
+                <input type="file" class="file-input file-input-bordered w-full mt-1" name="image3" id="image3" />
+            </div>
+            
             <div class="mt-4">
                 <label for="">Price</label>
                 <input type="text" placeholder="Type here" class="input input-bordered w-full mt-1" name="price" id="price" />
             </div>
+
+            <div class="mt-4">
+                <label for="">stock</label>
+                <input type="number" placeholder="Type here" class="input input-bordered w-full mt-1" name="stock" id="stock" />
+            </div>
+
             <div class="mt-4">
                 <label for="">Description</label>
                 <input type="text" placeholder="Type here" class=" input input-bordered w-full mt-1" name="description" id="description" />

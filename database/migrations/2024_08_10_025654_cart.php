@@ -6,19 +6,15 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('product', function (Blueprint $table) {
+        Schema::create('cart', function (Blueprint $table) {
             $table->id();
             $table->ForeignId('id_category');
             $table->string('itemName');
             $table->string('image1');
             $table->string('image2');
             $table->string('image3');
-            $table->string('stock');
             $table->string('price');
             $table->string('description');
             $table->timestamps();
@@ -27,6 +23,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('product');
+        Schema::dropIfExists('cart');
     }
 };

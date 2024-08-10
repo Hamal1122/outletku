@@ -1,15 +1,14 @@
 @extends('layout')
 @section('layout')
 
+
 <div class="flex">
 <div class="w-1/6">
     <x-sidebar-admin/>
 </div>
+<x:notify::notify />
 
 <section class="w-5/6 container mx-10 my-6 ">
-
- 
-
 
  
   <div class="bg-blue-600 w-fit px-4 py-3 text-white rounded-md my-4 hover:bg-blue-800 transition-all ">
@@ -30,18 +29,19 @@
                 <th scope="col" class="px-6 py-3">
                     Category
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    Thumbnail
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Image
-                </th>
+
                 <th scope="col" class="px-6 py-3">
                     Price
                 </th>
+
+                <th scope="col" class="px-6 py-3">
+                    Stock
+                </th>
+
                 <th scope="col" class="px-6 py-3">
                     Description
                 </th>
+                
                 <th scope="col" class="px-6 py-3">
                     Action
                 </th>
@@ -52,9 +52,8 @@
             <tr class="bg-white border-b">
                 <td class="px-6 py-4">{{ $item->itemName }}</td>
                 <td class="px-6 py-4">{{ $item->category->name }}</td>
-                <td class="px-6 py-4">{{ $item->thumbnail }}</td>
-                <td class="px-6 py-4">{{ $item->image }}</td>
                 <td class="px-6 py-4">{{ $item->price }}</td>
+                <td class="px-6 py-4">{{ $item->stock }}</td>
                 <td class="px-6 py-4">{{ $item->description }}</td>
                 <td class="px-6 py-4">
                     <div class="dropdown flex">
